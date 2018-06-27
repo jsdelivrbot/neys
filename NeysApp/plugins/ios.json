@@ -1,0 +1,36 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "it.fhj.ims.neys"
+    }
+  },
+  "dependent_plugins": {}
+}

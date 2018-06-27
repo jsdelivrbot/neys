@@ -1,0 +1,75 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.tab-button-icon.icon.icon-md, .tab-button-text {
+  color: #6f7ca7;
+}
+.tab-button.has-title.has-icon[aria-selected="true"] .tab-button-text {
+  color: #ee6275;
+}
+
+.toolbar-background, .toolbar-background-md {
+  background-color: #292d3d;
+}
+.toolbar-title, .toolbar-title-md {
+  color: #ee6275;
+  font-size: xx-large;
+  font-weight: lighter;
+  text-align: center;
+}
+.toolbar, .toolbar-md {
+  height: 80px;
+}
+.fixed-content {
+  margin-top: 80px;
+}
+.scroll-content {
+  margin-top: 80px;
+}
+ion-header {
+  background-color: #292d3d !important;
+}
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+.news-entry {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  .resource-and-source {
+    color: #7f7f7f;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+  }
+  .news-title {
+    font-weight: bold;
+    font-size: x-large;
+  }
+  .date-and-author {
+    font-size: smaller;
+    font-style: italic;
+  }
+}
+.action-button {
+  border-radius: 20%;
+  float: right;
+  font-size: 20px;
+  border: 1px solid #292d3d;
+  background-color: #292d3d;
+  color: #ee6275;
+}

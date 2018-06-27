@@ -1,0 +1,4 @@
+#Wed Jun 27 19:44:00 CEST 2018
+base.0=/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Neys</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ul class="news-list">
+    <li class="news-entry" *ngFor="let news of visibleNews">
+      <div role="link" (click)="loadInAppBrowser(news.url)">
+        <div class="resource-and-source"> {{news.resource.toUpperCase() + ' | ' + (news.source | sourcePipe)}}
+          <button *ngIf="!existsInReadingList(news)" class="action-button" (click)="addToReadingList($event, news)"><ion-icon name="add"></ion-icon></button>
+        </div>
+        <div class="news-title"> {{news.title}}</div>
+        <div class="date-and-author"> {{news.date | date: 'dd.MM.yyyy HH:mm'}} <span *ngIf="news.author != null"> {{', ' + news.author}}</span> </div>
+        <div class="description"> {{news.description}}</div>
+      </div>
+    </li>
+  </ul>
+</ion-content>

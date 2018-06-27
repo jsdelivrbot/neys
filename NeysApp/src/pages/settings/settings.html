@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-title>Settings</ion-title>
+  <ion-segment color="primary" [(ngModel)]="settingsTab">
+    <ion-segment-button value="sources">
+      Sources
+    </ion-segment-button>
+    <ion-segment-button value="ressources">
+      Resources
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="settingsTab === 'sources'">
+    <ion-item *ngFor="let setting of sourcesSettings">
+      <ion-label>{{setting.source | sourcePipe}}</ion-label>
+      <ion-checkbox color="dark" [checked]="setting.checked" (ionChange)="toggleSourceSelect(setting.source, $event)"></ion-checkbox>
+    </ion-item>
+  </div>
+
+  <div *ngIf="settingsTab === 'ressources'">
+    <ion-item *ngFor="let setting of ressourceSettings">
+      <ion-label style="text-transform:capitalize;">{{setting.ressource}}</ion-label>
+      <ion-checkbox color="dark" [checked]="setting.checked" (ionChange)="toggleRessourceSelect(setting.ressource, $event)"></ion-checkbox>
+    </ion-item>
+  </div>
+</ion-content>
