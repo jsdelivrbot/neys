@@ -262,7 +262,7 @@ var SaveForLaterPage = /** @class */ (function () {
     };
     SaveForLaterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/reading-list/reading-list.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Reading List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ul class="news-list">\n    <li class="news-entry" *ngFor="let news of visibleNews">\n      <div role="link" (click)="loadInAppBrowser(news.url)">\n        <div class="resource-and-source"> {{news.resource.toUpperCase() + \' | \' + (news.source | sourcePipe)}}\n          <button class="action-button" (click)="removeFromReadingList($event, news)"><ion-icon name="trash"></ion-icon></button>\n        </div>\n        <div class="news-title"> {{news.title}}</div>\n        <div class="date-and-author"> {{news.date | date: \'dd.MM.yyyy HH:mm\'}} <span *ngIf="news.author != null"> {{\', \' + news.author}}</span> </div>\n        <div class="description"> {{news.description}}</div>\n      </div>\n    </li>\n  </ul>\n</ion-content>\n\n'/*ion-inline-end:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/reading-list/reading-list.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/reading-list/reading-list.html"*/'<ion-header>\n  <ion-navbar>\n   <header>\n     <ion-title>Reading List</ion-title>\n   </header>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ul class="news-list">\n    <li class="news-entry" *ngFor="let news of visibleNews">\n      <div role="link" (click)="loadInAppBrowser(news.url)">\n        <div class="resource-and-source"> {{news.resource.toUpperCase() + \' | \' + (news.source | sourcePipe)}}\n          <button class="action-button" (click)="removeFromReadingList($event, news)" aria-label="Remove from reading list"><ion-icon name="trash"></ion-icon></button>\n        </div>\n        <div class="news-title"> {{news.title}}</div>\n        <div class="date-and-author"> {{news.date | date: \'dd.MM.yyyy HH:mm\'}} <span *ngIf="news.author != null"> {{\', \' + news.author}}</span> </div>\n        <div class="description"> {{news.description}}</div>\n      </div>\n    </li>\n  </ul>\n</ion-content>\n\n'/*ion-inline-end:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/reading-list/reading-list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
@@ -317,7 +317,7 @@ var SettingsPage = /** @class */ (function () {
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/settings/settings.html"*/'<ion-header>\n  <ion-title>Settings</ion-title>\n  <ion-segment color="primary" [(ngModel)]="settingsTab">\n    <ion-segment-button value="sources">\n      Sources\n    </ion-segment-button>\n    <ion-segment-button value="ressources">\n      Resources\n    </ion-segment-button>\n  </ion-segment>\n</ion-header>\n\n<ion-content>\n  <div *ngIf="settingsTab === \'sources\'">\n    <ion-item *ngFor="let setting of sourcesSettings">\n      <ion-label>{{setting.source | sourcePipe}}</ion-label>\n      <ion-checkbox color="dark" [checked]="setting.checked" (ionChange)="toggleSourceSelect(setting.source, $event)"></ion-checkbox>\n    </ion-item>\n  </div>\n\n  <div *ngIf="settingsTab === \'ressources\'">\n    <ion-item *ngFor="let setting of ressourceSettings">\n      <ion-label style="text-transform:capitalize;">{{setting.ressource}}</ion-label>\n      <ion-checkbox color="dark" [checked]="setting.checked" (ionChange)="toggleRessourceSelect(setting.ressource, $event)"></ion-checkbox>\n    </ion-item>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/settings/settings.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/settings/settings.html"*/'<ion-header>\n  <header>\n    <ion-title>Settings</ion-title>\n    <ion-segment color="primary" [(ngModel)]="settingsTab">\n      <ion-segment-button value="sources">\n        Sources\n      </ion-segment-button>\n      <ion-segment-button value="ressources">\n        Resources\n      </ion-segment-button>\n    </ion-segment>\n  </header>\n</ion-header>\n\n<ion-content>\n  <div *ngIf="settingsTab === \'sources\'">\n    <ion-item *ngFor="let setting of sourcesSettings">\n      <ion-label>{{setting.source | sourcePipe}}</ion-label>\n      <ion-checkbox color="dark" [checked]="setting.checked" (ionChange)="toggleSourceSelect(setting.source, $event)"></ion-checkbox>\n    </ion-item>\n  </div>\n\n  <div *ngIf="settingsTab === \'ressources\'">\n    <ion-item *ngFor="let setting of ressourceSettings">\n      <ion-label style="text-transform:capitalize;">{{setting.ressource}}</ion-label>\n      <ion-checkbox color="dark" [checked]="setting.checked" (ionChange)="toggleRessourceSelect(setting.ressource, $event)"></ion-checkbox>\n    </ion-item>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/settings/settings.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__shared_settings_service__["a" /* SettingsService */],
@@ -377,18 +377,28 @@ var NewsfeedPage = /** @class */ (function () {
         this.http = http;
         this.visibleNews = [];
         this.loadedNews = new __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__["Subject"]();
+        this.loading = true;
     }
     NewsfeedPage.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get("https://lit-dusk-63084.herokuapp.com/feed").subscribe(function (res) {
-            _this.loadedNews.next(res);
-        });
+        this.fetchNews();
         __WEBPACK_IMPORTED_MODULE_6_rxjs__["Observable"].combineLatest(this.settingsService.sourcesSettings$, this.settingsService.ressourceSettings$, this.loadedNews, function (sources, ressources, news) { return { sources: sources, ressources: ressources, news: news }; }).pipe(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators__["filter"])(function (combined) { return combined.sources != null && combined.sources.length > 0; }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators__["filter"])(function (combined) { return combined.ressources != null && combined.ressources.length > 0; }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators__["filter"])(function (combined) { return combined.news != null && combined.news.length > 0; })).subscribe(function (combined) {
             _this.visibleNews = combined.news.filter(function (value) {
                 return combined.sources.filter(function (source) { return source.source === value.source && source.checked; }).length > 0
                     && combined.ressources.filter(function (ressource) { return ressource.ressource === value.resource && ressource.checked; }).length > 0;
             });
         });
+    };
+    NewsfeedPage.prototype.fetchNews = function () {
+        var _this = this;
+        this.http.get("https://lit-dusk-63084.herokuapp.com/feed").subscribe(function (res) {
+            _this.loadedNews.next(res);
+            _this.loading = false;
+        });
+    };
+    NewsfeedPage.prototype.refreshNews = function () {
+        this.loading = true;
+        this.fetchNews();
     };
     NewsfeedPage.prototype.loadInAppBrowser = function (url) {
         this.iab.create(url);
@@ -403,16 +413,12 @@ var NewsfeedPage = /** @class */ (function () {
     };
     NewsfeedPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/newsfeed/newsfeed.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Neys</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ul class="news-list">\n    <li class="news-entry" *ngFor="let news of visibleNews">\n      <div role="link" (click)="loadInAppBrowser(news.url)">\n        <div class="resource-and-source"> {{news.resource.toUpperCase() + \' | \' + (news.source | sourcePipe)}}\n          <button *ngIf="!existsInReadingList(news)" class="action-button" (click)="addToReadingList($event, news)"><ion-icon name="add"></ion-icon></button>\n        </div>\n        <div class="news-title"> {{news.title}}</div>\n        <div class="date-and-author"> {{news.date | date: \'dd.MM.yyyy HH:mm\'}} <span *ngIf="news.author != null"> {{\', \' + news.author}}</span> </div>\n        <div class="description"> {{news.description}}</div>\n      </div>\n    </li>\n  </ul>\n</ion-content>\n'/*ion-inline-end:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/newsfeed/newsfeed.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/newsfeed/newsfeed.html"*/'<ion-header>\n  <ion-navbar>\n    <header>\n      <ion-title>Neys</ion-title>\n      <button class="refresh-button" tabindex="0" aria-label="Refresh news" (click)="refreshNews()"><ion-icon name="refresh"></ion-icon></button>\n    </header>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-spinner *ngIf="loading" aria-label="loading news, please wait"></ion-spinner>\n  <ul *ngIf="!loading" class="news-list">\n    <li class="news-entry" *ngFor="let news of visibleNews">\n      <div role="link" tabindex="0" (click)="loadInAppBrowser(news.url)">\n        <div class="resource-and-source"> {{news.resource.toUpperCase() + \' | \' + (news.source | sourcePipe)}}\n          <button *ngIf="!existsInReadingList(news)" class="action-button" (click)="addToReadingList($event, news)" aria-label="Add to reading list"><ion-icon name="add"></ion-icon></button>\n        </div>\n        <div class="news-title"> {{news.title}}</div>\n        <div class="date-and-author"> {{news.date | date: \'dd.MM.yyyy HH:mm\'}} <span *ngIf="news.author != null"> {{\', \' + news.author}}</span> </div>\n        <div class="description"> {{news.description}}</div>\n      </div>\n    </li>\n  </ul>\n</ion-content>\n'/*ion-inline-end:"/Users/edi/Library/Mobile Documents/iCloud~com~gogolith~gocoed/Documents/fh_joanneum/ISM/Sem2/CrPlaDev/project/neys/src/pages/newsfeed/newsfeed.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__shared_settings_service__["a" /* SettingsService */],
-            __WEBPACK_IMPORTED_MODULE_8__shared_reading_service__["a" /* ReadingService */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_native_vibration__["a" /* Vibration */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_settings_service__["a" /* SettingsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__shared_settings_service__["a" /* SettingsService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_8__shared_reading_service__["a" /* ReadingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__shared_reading_service__["a" /* ReadingService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_9__ionic_native_vibration__["a" /* Vibration */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__ionic_native_vibration__["a" /* Vibration */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _f || Object])
     ], NewsfeedPage);
     return NewsfeedPage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=newsfeed.js.map

@@ -25754,8 +25754,32 @@ ion-header {
   background-color: #292d3d !important;
 }
 
+page-home header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-home ion-spinner {
+  height: 20%;
+  width: 100%;
+}
+
+page-home .refresh-button {
+  background-color: transparent;
+  color: #ee6275;
+  font-size: 25px;
+  padding-right: 15px;
+}
+
 page-home .toolbar-title, page-home .toolbar-title-md {
   font-family: 'Shrikhand', cursive;
+  text-align: center;
+}
+
+page-home .toolbar-title > div, page-home .toolbar-title-md > div {
+  display: inline;
 }
 
 page-contact .title.title-md {

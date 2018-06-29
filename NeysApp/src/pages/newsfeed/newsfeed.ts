@@ -17,6 +17,7 @@ import {Vibration} from "@ionic-native/vibration";
 export class NewsfeedPage implements OnInit {
   visibleNews: Array<NewsEntry> = [];
   loadedNews: Subject<Array<NewsEntry>> = new Subject();
+  loading: boolean = true;
 
   constructor(public navCtrl: NavController,
               private settingsService: SettingsService,
@@ -27,9 +28,7 @@ export class NewsfeedPage implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get<NewsEntry[]>("https://lit-dusk-63084.herokuapp.com/feed").subscribe(res => {
-      this.loadedNews.next(res);
-    });
+    this.fetchNews();
     Observable.combineLatest(
       this.settingsService.sourcesSettings$,
       this.settingsService.ressourceSettings$,
@@ -45,6 +44,18 @@ export class NewsfeedPage implements OnInit {
         && combined.ressources.filter(ressource => ressource.ressource === value.resource && ressource.checked).length > 0
       );
     });
+  }
+
+  private fetchNews() {
+    this.http.get<NewsEntry[]>("https://lit-dusk-63084.herokuapp.com/feed").subscribe(res => {
+      this.loadedNews.next(res);
+      this.loading = false;
+    });
+  }
+
+  refreshNews() {
+    this.loading = true;
+    this.fetchNews();
   }
 
   loadInAppBrowser(url: string) {
