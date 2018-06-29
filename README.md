@@ -8,7 +8,7 @@
 - accessible
 - android & ios
 
-Please view [the presentation slides](neys-slides.pdf) or [the poster](neys-plakat.pdf) for more detailed information.
+Please view [the presentation slides](https://github.com/ladarphi15/neys/blob/master/NeysApp/neys-slides.pdf) or [the poster](https://github.com/ladarphi15/neys/blob/master/NeysApp/neys_plakat.pptx) for more detailed information.
 
 Just download and try it:
 https://github.com/ladarphi15/neys
